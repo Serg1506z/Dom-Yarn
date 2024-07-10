@@ -2,6 +2,26 @@ import goblin from '../pic/goblin.png'
 const containerElements = document.querySelectorAll('.place__container')
 let num 
 const condition = true
+let count = 0
+
+
+function handleClick(e){
+    const place = e.target
+    console.log(place);
+    // const goblinElement = .querySelector('img')
+    // console.log(goblinElement);
+    // if(goblinElement){
+    //     goblinElement.remove()
+    //     console.log('Kill the goblin');
+    // }else {
+    //     console.log('you Missing');
+    //     count++
+    //     if(count >= 5){
+    //         alert('Game over')
+    //     }
+    // }
+  
+}
 
 setInterval(() => {
     while(condition){
@@ -19,3 +39,6 @@ setInterval(() => {
 setInterval(() => {
     containerElements.forEach(item => item.innerHTML = '')
 }, 2000)
+
+
+containerElements.forEach(item => item.addEventListener('click',  handleClick))
